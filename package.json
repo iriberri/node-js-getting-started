@@ -10,7 +10,7 @@
     "heroku-prebuild": "echo hi; echo $GATSBY_TELEMETRY_DISABLED; echo bye;",
     "start": "node index.js",
     "test": "node test.js",
-    "heroku-postbuild": "echo hi; echo $GATSBY_TELEMETRY_DISABLED; echo bye;"
+    "heroku-postbuild": "node script.js"
 
   },
   "dependencies": {
