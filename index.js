@@ -13,7 +13,12 @@ var redis = new Redis({
   port: Number(redis_uri.port) + 1,
   host: redis_uri.hostname,
   password: redis_uri.auth.split(':')[1],
-  db: 0
+  db: 0,
+  tls: {
+    rejectUnauthorized: false,
+    requestCert: true,
+    agent: false
+  }
 });
 
 console.log(redis);
