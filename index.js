@@ -8,9 +8,9 @@ console.log(process.env);
 var url   = require('url');
 var Redis = require('ioredis');
 
-redis_uri = url.parse(process.env.REDIS_URL);
+redis_uri = url.parse(process.env.REDIS_TLS_URL);
 var redis = new Redis({
-  port: Number(redis_uri.port) + 1,
+  port: Number(redis_uri.port),
   host: redis_uri.hostname,
   password: redis_uri.auth.split(':')[1],
   db: 0,
