@@ -25,7 +25,16 @@ console.log(redis);
 
 redis.set("foo", "bar"); 
 
-redis.get("foo"); 
+await sleep(1000);
+
+console.log(redis.get("foo")); 
+
+
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+} 
 
 
 console.log(process.env.GATSBY_TELEMETRY_DISABLED);
