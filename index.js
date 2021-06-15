@@ -15,7 +15,7 @@ var redis = new Redis({
   password: redis_uri.auth.split(':')[1],
   db: 0,
   tls: {
-    rejectUnauthorized: false,
+    rejectUnauthorized: true,
     requestCert: true,
     agent: false
   }
