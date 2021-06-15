@@ -25,7 +25,7 @@ console.log(redis);
 
 redis.set("foo", "bar"); 
 
-await sleep(1000);
+sleep(1000);
 
 console.log(redis.get("foo")); 
 
