@@ -23,6 +23,11 @@ var redis = new Redis({
 
 console.log(redis);
 
+redis.set("foo", "bar"); 
+
+sleep(10000);
+redis.get("foo"); 
+
 
 console.log(process.env.GATSBY_TELEMETRY_DISABLED);
 console.log('.'.repeat(100));
